@@ -1,0 +1,55 @@
+{
+  "database": {
+    "type": "sqlite",
+    "path": "gn_inventory.db"
+  },
+  "backup": {
+    "dir": "backups",
+    "secondary_dirs": ["backups_copy", "cloud_sync"],
+    "retention_days": 30,
+    "min_keep": 3,
+    "compress": true,
+    "encrypt": false,
+    "key_file": "backup.key",
+    "log_file": "logs/backup_system.log"
+  },
+  "alerts": {
+    "on": "failure",
+    "email": {
+      "enabled": false,
+      "smtp_host": "smtp.gmail.com",
+      "smtp_port": 587,
+      "username": "your.address@gmail.com",
+      "password_env": "GN_SMTP_PASSWORD",
+      "from": "your.address@gmail.com",
+      "to": ["owner@example.com"]
+    },
+    "telegram": {
+      "enabled": false,
+      "bot_token_env": "GN_TELEGRAM_TOKEN",
+      "chat_id": "123456789"
+    }
+  },
+  "app": {
+    "host": "127.0.0.1",
+    "port": 5000,
+    "low_stock_threshold": 20,
+    "secret_key_file": "instance/secret.key",
+    "session_hours": 8
+  },
+  "company": {
+    "name": "G.N. Enterprises",
+    "address": "K-138-139, Shop No. B-1A, L.G.F. Gupta Apartment, Kalkaji, New Delhi-110019",
+    "phone": "9899659190",
+    "email": "gn.enterprises@ymail.com",
+    "gstin": "07AAAAA0000A1Z5 (SAMPLE)",
+    "state": "Delhi"
+  },
+  "forecast": {
+    "lookback_days": 120,
+    "lead_time_days": 7,
+    "safety_days": 7,
+    "cover_days": 14
+  },
+  "reports_dir": "reports"
+}
