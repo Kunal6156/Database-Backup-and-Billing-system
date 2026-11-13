@@ -1,4 +1,3 @@
-# data & secrets - never commit these
 gn_inventory.db
 *.db
 *.pre_restore_bak
