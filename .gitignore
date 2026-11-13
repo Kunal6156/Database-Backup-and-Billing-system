@@ -1,0 +1,18 @@
+# data & secrets - never commit these
+gn_inventory.db
+*.db
+*.pre_restore_bak
+backup.key
+instance/
+data/
+backups/
+backups_copy/
+cloud_sync/
+logs/
+reports/
+recovered.db
+.env
+# python
+__pycache__/
+*.pyc
+.venv/
